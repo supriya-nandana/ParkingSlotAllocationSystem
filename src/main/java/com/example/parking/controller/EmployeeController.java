@@ -29,8 +29,8 @@ public class EmployeeController {
 	 @PostMapping("/login")
     public String login(@Valid @RequestBody Credentials credentials) throws InvalidCredentialsException {
        // logger.info("authenticating the user");
-    	return employeeService.authenticate(credentials.getMailId(), credentials.getPassword());
-       
+		 return employeeService.authenticate(credentials.getMailId(), credentials.getPassword());
+        
     }
 	 
 	 @ExceptionHandler(MethodArgumentNotValidException.class)
